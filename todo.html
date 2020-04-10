@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Angular App</title>
+    <link rel="stylesheet" href="todo.css">
+
+<body>
+    <div class="main" ng-app="myList" ng-controller="myListController">
+        <h1>ToDO List</h1>
+        <form ng-submit="addItem()">
+            <input type="text" required="required" ng-model="newItem" placeholder="Add Item" class="addText">
+            <input type="submit" class="button" value="Add">
+        </form>
+        <ul>
+            <li ng-repeat="item in items">
+                <!-- <span><input type='checkbox' ng-model='checkbox'></span> -->
+                {{item}}
+                <span ng-click="deleteItem($index)">X</span>
+            </li>
+        </ul>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="todo.js"></script>
+</body>
+</head>
+
+</html>
