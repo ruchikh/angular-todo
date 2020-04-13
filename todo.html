@@ -14,7 +14,7 @@
             <input type="submit" class="button" value="Add">
         </form>
         <ul>
-            <li ng-repeat="item in items">
+            <li ng-repeat="item in items | filter:newItem | orderBy:newItem">
                 {{item}}
                 <span ng-click="deleteItem($index)">X</span>
             </li>
