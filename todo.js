@@ -2,7 +2,7 @@
 const myApp = angular.module("myList", []);
 
 myApp.controller("myListController", function ($scope) {
-    $scope.items = JSON.parse(localStorage.getItem("todoArray")) || ["AngularJs", "Reactjs", "TypeScript"];
+    $scope.items = JSON.parse(localStorage.getItem("todoArray")) || [];
     $scope.newItem = ""
 
     $scope.addItem = function () {

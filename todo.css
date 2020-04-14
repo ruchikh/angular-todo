@@ -28,6 +28,7 @@ li {
     padding: 10px 30px;
     margin-bottom: 5px;
     text-align: initial;
+    text-transform: capitalize;
 }
 
 li span {
